@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login El Gato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="register.html">
+        <div id="back-button">
+            <p class="button-p"> Back </p>
+            <img class="arrow-size" src="images/163428-black-arrow-left-download-hd.png" alt="arrow-left">
+        </div>
+    </a>
+    <div id="login">
+        <h1> Login </h1>
+        <div class="form-container">
+            <form>
+                <label for="emailInput">Email: </label>
+                <input type="email" id="emailInput" name="emailInput"><br><br>
+                <label for="password"> Password: </label>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Login" id="submit">
+            </form>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slides">
+          <!--radio buttons start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio buttons end-->
+          <!--slide images start-->
+          <div class="slide first">
+            <img src="images/HD-wallpaper-enchiladas-dish-food-mexican.jpg" alt="Enchiladas">
+            <div class="price-tag">
+              <p class="center-p"> $9.99 </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/pexels-photo-2092897.jpeg" alt="Nacho-Plate">
+          </div>
+          <div class="slide">
+            <img src="images/pexels-pixabay-461198.jpg" alt="Burrito">
+          </div>
+          <div class="slide">
+            <img src="images/wp3645674.jpg" alt="Mix-Plate">
+          </div>
+          <!--slide images end-->
+          <!--automatic navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
+      </div>
+      <!--image slider end-->
+  
+      <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 5000);
+      </script>
+</body>
+</html>
